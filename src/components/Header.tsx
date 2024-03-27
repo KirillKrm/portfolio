@@ -5,6 +5,35 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import FacebookIcon from '@mui/icons-material/Facebook'
 
+interface Contact {
+  name: string
+  url: string
+  icon: React.ReactElement
+}
+
+const contactList: Contact[] = [
+  {
+    name: 'Email',
+    url: 'mailto:kirillkarmazin2301@gmail.com',
+    icon: <EmailOutlinedIcon fontSize="large" />,
+  },
+  {
+    name: 'GitHub',
+    url: 'https://github.com/KirillKrm',
+    icon: <GitHubIcon fontSize="large" />,
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/kyrylo-karmazin-37505718a/',
+    icon: <LinkedInIcon fontSize="large" />,
+  },
+  {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/profile.php?id=100007744062507',
+    icon: <FacebookIcon fontSize="large" />,
+  },
+]
+
 export default function Header() {
   return (
     <div className={styles.container}>
@@ -15,50 +44,20 @@ export default function Header() {
       <div className={styles.container__position}>Front-End Developer</div>
       <hr className={styles.container__divider} />
       <div className={styles.container__contacts}>
-        <div className={styles.container__contact}>
-          <a
-            className={styles.contact__icon}
-            href="mailto:kirillkarmazin2301@gmail.com"
-          >
-            <EmailOutlinedIcon fontSize="large" />
-          </a>
-          <div className={styles.contact__text}>
-            <span className="font-bold">Email</span>
-          </div>
-        </div>
-        <div className={styles.container__contact}>
-          <a
-            className={styles.contact__icon}
-            href="https://github.com/KirillKrm"
-          >
-            <GitHubIcon fontSize="large" />
-          </a>
-          <div className={styles.contact__text}>
-            <span className="font-bold">GitHub</span>
-          </div>
-        </div>
-        <div className={styles.container__contact}>
-          <a
-            className={styles.contact__icon}
-            href="https://www.linkedin.com/in/kyrylo-karmazin-37505718a/"
-          >
-            <LinkedInIcon fontSize="large" />
-          </a>
-          <div className={styles.contact__text}>
-            <span className="font-bold">LinkedIn</span>
-          </div>
-        </div>
-        <div className={styles.container__contact}>
-          <a
-            className={styles.contact__icon}
-            href="https://www.facebook.com/profile.php?id=100007744062507"
-          >
-            <FacebookIcon fontSize="large" />
-          </a>
-          <div className={styles.contact__text}>
-            <span className="font-bold">Facebook</span>
-          </div>
-        </div>
+        {contactList.map((contact) => {
+          return (
+            <a
+              key={contact.name}
+              className={styles.container__contact}
+              href={contact.url}
+            >
+              <div className={styles.contact__icon}>{contact.icon}</div>
+              <div className={styles.contact__text}>
+                <span className="font-bold">{contact.name}</span>
+              </div>
+            </a>
+          )
+        })}
       </div>
     </div>
   )
@@ -86,7 +85,7 @@ const styles = {
   container__name: `
     mt-4
     font-bold
-    text-xl
+    text-2xl
   `,
   container__position: `
     mt-2
@@ -113,6 +112,11 @@ const styles = {
     justify-left
     items-center
     gap-2
+    rounded-2xl
+    ease-in-out
+    duration-300
+    hover:bg-[rgba(0,0,0,0.1)]
+    hover:scale-110
   `,
   contact__icon: `
     flex
@@ -121,11 +125,12 @@ const styles = {
     justify-center
     items-center
     rounded-xl
-    shadow-[0_3px_10px_rgb(0,0,0,0.4)]
+    drop-shadow-[-2px_2px_4px_rgb(0,0,0)]
   `,
   contact__text: `
     flex
     flex-col
     truncate
+    text-lg
   `,
 }

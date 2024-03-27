@@ -1,13 +1,40 @@
 import React from 'react'
+import classNames from 'classnames'
+
+import About from './About'
+import Projects from './Projects'
+import Skills from './Skills'
 
 export default function Main() {
+  const [activeComponent, setActiveComponent] = React.useState('About')
+
+  const handleButtonClick = (componentName: string) => {
+    setActiveComponent(componentName)
+  }
+
+  const buttonNames = ['About', 'Projects', 'Skills']
+
   return (
     <div className={styles.container}>
       <div className={styles.container__header}>
-        <button className={styles.header__button}>About</button>
-        <button className={styles.header__button}>Projects</button>
-        <button className={styles.header__button}>Skills</button>
+        {buttonNames.map((name) => {
+          return (
+            <button
+              key={name}
+              className={
+                styles.header__button +
+                classNames({ 'font-bold': activeComponent === name })
+              }
+              onClick={() => handleButtonClick(name)}
+            >
+              {name}
+            </button>
+          )
+        })}
       </div>
+      {activeComponent === 'About' && <About />}
+      {activeComponent === 'Projects' && <Projects />}
+      {activeComponent === 'Skills' && <Skills />}
     </div>
   )
 }
@@ -27,6 +54,8 @@ const styles = {
     flex-row
     h-12
     justify-center
+    bg-tertiary
+    rounded-t-2xl
   `,
   header__button: `
     flex
@@ -35,5 +64,6 @@ const styles = {
     justify-center
     items-center
     hover:bg-[rgba(0,0,0,0.1)]
+    text-xl
   `,
 }

@@ -21,6 +21,7 @@ const styles = {
     py-8
     gap-4
     bg-primary
+    bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]
     text-quaternary
   `,
 }
