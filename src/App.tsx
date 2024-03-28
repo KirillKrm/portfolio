@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Header from './components/Header'
-import Main from './components/Main'
+import Main from './components/MainComponent/Main'
 
 function App() {
   return (
@@ -15,14 +15,18 @@ function App() {
 const styles = {
   container: `
     flex
-    w-full
+    flex-col
     h-full
-    justify-center
+    items-center
     py-8
-    gap-4
+    gap-8
     bg-primary
     bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]
     text-quaternary
+
+    sm:flex-row
+    sm:justify-center
+    sm:items-start
   `,
 }
 

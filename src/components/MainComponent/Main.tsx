@@ -1,9 +1,9 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import About from './About'
-import Projects from './Projects'
-import Skills from './Skills'
+import About from './components/About'
+import Projects from './components/Projects'
+import Skills from './components/Skills'
 
 export default function Main() {
   const [activeComponent, setActiveComponent] = React.useState('About')
@@ -43,11 +43,13 @@ const styles = {
   container: `
     flex
     flex-col
-    w-4/6
-    h-full
-    min-w-min
+    mx-8
+    h-min
     bg-secondary
     rounded-2xl
+
+    sm:w-4/6
+    sm:mx-0
   `,
   container__header: `
     flex

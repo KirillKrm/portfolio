@@ -67,13 +67,16 @@ const styles = {
   container: `
     flex
     flex-col
-    w-1/6
-    h-full
+    static
+    w-min
     py-6
-    min-w-min
     items-center
     bg-secondary
     rounded-2xl
+
+    sm:sticky
+    sm:top-8
+    sm:w-64
   `,
   container__portret: `
     w-[200px]

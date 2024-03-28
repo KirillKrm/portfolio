@@ -6,6 +6,10 @@
   min-width: 0;
 }
 
+#root {
+  @apply h-full;
+}
+
 body,
 html {
   margin: 0;
