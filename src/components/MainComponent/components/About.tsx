@@ -90,12 +90,14 @@ const styles = {
   grid__cell: `
     flex
     flex-row
-    w-96
+    w-full
     justify-center
     items-center
     p-2
     gap-2
     rounded-xl
     bg-primary
+
+    sm:w-80
   `,
 }

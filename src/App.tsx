@@ -16,10 +16,10 @@ const styles = {
   container: `
     flex
     flex-col
-    h-full
+    min-h-screen
     items-center
-    py-8
-    gap-8
+    p-4
+    gap-4
     bg-primary
     bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]
     text-quaternary
@@ -27,6 +27,8 @@ const styles = {
     sm:flex-row
     sm:justify-center
     sm:items-start
+    sm:p-8
+    sm:gap-8
   `,
 }
 

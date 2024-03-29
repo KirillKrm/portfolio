@@ -37,18 +37,20 @@ const contactList: Contact[] = [
 export default function Header() {
   return (
     <div className={styles.container}>
-      <div className={styles.container__portret}>
-        <img src="portfolio/portret.jpg" alt="portret" />
+      <div className={styles.container__profile}>
+        <div className={styles.profile__portret}>
+          <img src="portfolio/portret.jpg" alt="portret" />
+        </div>
+        <div className={styles.profile__name}>Kyrylo Karmazin</div>
+        <div className={styles.profile__position}>Front-End Developer</div>
       </div>
-      <div className={styles.container__name}>Kyrylo Karmazin</div>
-      <div className={styles.container__position}>Front-End Developer</div>
-      <hr className={styles.container__divider} />
+      <div className={styles.container__divider} />
       <div className={styles.container__contacts}>
         {contactList.map((contact) => {
           return (
             <a
               key={contact.name}
-              className={styles.container__contact}
+              className={styles.contacts__contact}
               href={contact.url}
             >
               <div className={styles.contact__icon}>{contact.icon}</div>
@@ -66,10 +68,9 @@ export default function Header() {
 const styles = {
   container: `
     flex
-    flex-col
     static
-    w-min
-    py-6
+    h-[400px]
+    p-6
     items-center
     bg-secondary
     rounded-2xl
@@ -77,40 +78,62 @@ const styles = {
     sm:sticky
     sm:top-8
     sm:w-64
+    sm:h-min
+    sm:flex-col
+    sm:mx-0
+    sm:p-0
+    sm:py-6
   `,
-  container__portret: `
-    w-[200px]
-    min-h-[200px]
+  container__profile: `
+    flex
+    flex-col
+    w-full
+    h-full
+    items-center
+  `,
+  profile__portret: `
+    w-full
+    max-w-40
+    h-auto
     mx-4
     rounded-3xl
     overflow-hidden
   `,
-  container__name: `
+  profile__name: `
     mt-4
     font-bold
     text-2xl
+    text-center
   `,
-  container__position: `
+  profile__position: `
     mt-2
     px-2
     py-0.5
     bg-tertiary
     rounded-md
     text-sm
+    text-center
   `,
   container__divider: `
-    my-6
-    w-5/6
-    border-1
-    border-tertiary
+    flex
+    w-px
+    h-full
+    mx-3
+    bg-tertiary
+
+    sm:w-5/6
+    sm:h-px
+    sm:my-6
   `,
   container__contacts: `
     flex
     flex-col
+    w-full
     gap-4
-    w-5/6
+
+    sm:w-5/6
   `,
-  container__contact: `
+  contacts__contact: `
     flex
     justify-left
     items-center

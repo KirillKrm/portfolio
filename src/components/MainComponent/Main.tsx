@@ -43,7 +43,6 @@ const styles = {
   container: `
     flex
     flex-col
-    mx-8
     h-min
     bg-secondary
     rounded-2xl

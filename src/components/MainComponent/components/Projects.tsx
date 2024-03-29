@@ -31,20 +31,26 @@ const styles = {
   `,
   container__grid: `
     grid
-    grid-cols-3
+    grid-cols-1
     gap-4
+
+    sm:grid-cols-2
   `,
   grid__cell: `
+    flex
+    flex-col
     rounded-xl
     bg-primary
     overflow-hidden
   `,
   cell__image: `
-    w-full
     h-5/6
     object-cover
   `,
   cell__name: `
-    p-2
+    flex
+    h-1/6
+    justify-center
+    items-center
   `,
 }
