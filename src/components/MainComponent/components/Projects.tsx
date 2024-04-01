@@ -28,6 +28,7 @@ export default function Projects() {
 const styles = {
   container: `
     p-6
+    select-none
   `,
   container__grid: `
     grid

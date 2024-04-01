@@ -4,6 +4,7 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import FacebookIcon from '@mui/icons-material/Facebook'
+import { motion } from 'framer-motion'
 
 interface Contact {
   name: string
@@ -130,6 +131,7 @@ const styles = {
     flex-col
     w-full
     gap-4
+    select-none
 
     sm:w-5/6
   `,
@@ -141,7 +143,7 @@ const styles = {
     rounded-2xl
     ease-in-out
     duration-300
-    hover:bg-[rgba(0,0,0,0.1)]
+    hover:bg-black/10
     hover:scale-110
   `,
   contact__icon: `
@@ -151,7 +153,7 @@ const styles = {
     justify-center
     items-center
     rounded-xl
-    drop-shadow-[-2px_2px_4px_rgb(0,0,0)]
+    drop-shadow-[-2px_2px_4px_black]
   `,
   contact__text: `
     flex
