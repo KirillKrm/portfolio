@@ -3,20 +3,52 @@ export default function Projects() {
     <div className={styles.container}>
       <div className={styles.container__grid}>
         <div className={styles.grid__cell}>
-          <img
-            className={styles.cell__image}
-            alt="Video-conferencing"
-            src="https://builtin.com/sites/www.builtin.com/files/styles/og/public/video-conferencing-software.jpg"
-          />
-          <span className={styles.cell__name}>Video conferencing</span>
+          <a
+            className={styles.cell__anchor}
+            href={'https://github.com/KirillKrm/WebChat_frontend'}
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <img
+              className={styles.anchor__image}
+              alt="Video-conferencing"
+              src="portfolio/video_conferencing.png"
+            />
+          </a>
+          <div className={styles.cell__text}>
+            <span className={styles.text__name}>Video conferencing</span>
+            <span className={styles.text__description}>
+              Video conferencing is a web app that allows you to create or join
+              video meetings.
+            </span>
+            <span className={styles.text__description}>
+              React.js, Socket.IO, WebRTC
+            </span>
+          </div>
         </div>
         <div className={styles.grid__cell}>
-          <img
-            className={styles.cell__image}
-            alt="Twitter Clone"
-            src="https://www.lifewire.com/thmb/2BFcuvX0tJGDv1FXNWf_jn1_xGQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Capture-a93cb7b76f4b4f89b9449b6b368ab8e9.JPG"
-          />
-          <span className={styles.cell__name}>Twitter Clone</span>
+          <a
+            className={styles.cell__anchor}
+            href={'https://github.com/KirillKrm/twitter-clone'}
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <img
+              className={styles.anchor__image}
+              alt="Twitter Clone"
+              src="portfolio/twitter_clone.jpg"
+            />
+          </a>
+          <div className={styles.cell__text}>
+            <span className={styles.text__name}>Twitter Clone</span>
+            <span className={styles.text__description}>
+              Twitter Clone is a web app that allows you to create and read user
+              posts.
+            </span>
+            <span className={styles.text__description}>
+              React.js, Redux, TailwindCSS, Framer Motion, i18n
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -33,7 +65,8 @@ const styles = {
     grid-cols-1
     gap-4
 
-    sm:grid-cols-2
+    sm:grid-cols-1
+    md:grid-cols-2
   `,
   grid__cell: `
     flex
@@ -42,14 +75,26 @@ const styles = {
     bg-primary
     overflow-hidden
   `,
-  cell__image: `
+  cell__anchor: `
     h-5/6
-    object-cover
   `,
-  cell__name: `
+  anchor__image: `
+    h-full
+    object-cover
+
+    hover:opacity-90
+  `,
+  cell__text: `
     flex
-    h-1/6
-    justify-center
-    items-center
+    flex-col
+    m-4
+    gap-1
+  `,
+  text__name: `
+    font-bold
+    text-xl
+  `,
+  text__description: `
+    text-quaternary/60
   `,
 }

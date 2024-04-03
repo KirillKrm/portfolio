@@ -52,6 +52,8 @@ export default function Header() {
               key={contact.name}
               className={styles.contacts__contact}
               href={contact.url}
+              rel="noreferrer noopener"
+              target="_blank"
             >
               <div className={styles.contact__icon}>{contact.icon}</div>
               <div className={styles.contact__text}>
@@ -98,6 +100,7 @@ const styles = {
     mx-4
     rounded-3xl
     overflow-hidden
+    select-none
   `,
   profile__name: `
     mt-4

@@ -40,6 +40,22 @@ const skillList: Skill[] = [
     name: 'Tailwind CSS',
     percent: '100%',
   },
+  {
+    name: 'Framer Motion',
+    percent: '100%',
+  },
+  {
+    name: 'Socket.IO',
+    percent: '100%',
+  },
+  {
+    name: 'WebRTC',
+    percent: '80%',
+  },
+  {
+    name: 'Git',
+    percent: '100%',
+  },
 ]
 
 export default function Skills() {

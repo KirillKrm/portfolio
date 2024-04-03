@@ -15,7 +15,7 @@ export default function About() {
       </p>
       <p>
         I graduated from <b>National Aviation University</b> (State University
-        "Kyiv Aviation Institute")in 2024 with a master's degree in Computer
+        "Kyiv Aviation Institute") in 2024 with a master's degree in Computer
         Engineering, and I've been actively working in the field ever since.
       </p>
       <p>
