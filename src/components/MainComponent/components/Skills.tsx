@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface Skill {
   name: string
   percent: string
@@ -69,8 +67,8 @@ export default function Skills() {
 
 const styles = {
   container: `
-    flex
-    flex-col
+    grid
+    grid-cols-2
     p-6
     gap-4
     select-none

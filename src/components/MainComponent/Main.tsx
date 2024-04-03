@@ -26,9 +26,12 @@ export default function Main() {
               onClick={() => handleButtonClick(name)}
             >
               <span
-                className={classNames({
-                  'text-quaternary': activeComponent === name,
-                })}
+                className={
+                  styles.button__name +
+                  classNames({
+                    'text-quaternary': activeComponent === name,
+                  })
+                }
               >
                 {name}
               </span>
@@ -78,13 +81,18 @@ const styles = {
     text-xl
     text-quaternary/60
     select-none
+  `,
+  button__name: `
+    px-2
+    py-1
+    rounded-md
 
     hover:bg-black/10
     hover:text-quaternary
   `,
   button__underline: `
     absolute
-    bottom-0
+    -bottom-1
     w-full
     h-1
     bg-tertiary

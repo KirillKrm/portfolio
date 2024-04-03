@@ -4,7 +4,6 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import FacebookIcon from '@mui/icons-material/Facebook'
-import { motion } from 'framer-motion'
 
 interface Contact {
   name: string
@@ -25,7 +24,7 @@ const contactList: Contact[] = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/kyrylo-karmazin-37505718a/',
+    url: 'https://www.linkedin.com/in/kyrylo-karmazin/',
     icon: <LinkedInIcon fontSize="large" />,
   },
   {

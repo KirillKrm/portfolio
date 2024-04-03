@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Projects() {
   return (
     <div className={styles.container}>
@@ -10,7 +8,7 @@ export default function Projects() {
             alt="Video-conferencing"
             src="https://builtin.com/sites/www.builtin.com/files/styles/og/public/video-conferencing-software.jpg"
           />
-          <span className={styles.cell__name}>Video-conferencing</span>
+          <span className={styles.cell__name}>Video conferencing</span>
         </div>
         <div className={styles.grid__cell}>
           <img
