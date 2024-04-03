@@ -12,7 +12,7 @@ export default function Projects() {
             <img
               className={styles.anchor__image}
               alt="Video-conferencing"
-              src="portfolio/video_conferencing.png"
+              src="https://raw.githubusercontent.com/KirillKrm/portfolio/main/public/video_conferencing.png"
             />
           </a>
           <div className={styles.cell__text}>
@@ -36,7 +36,7 @@ export default function Projects() {
             <img
               className={styles.anchor__image}
               alt="Twitter Clone"
-              src="portfolio/twitter_clone.jpg"
+              src="https://raw.githubusercontent.com/KirillKrm/portfolio/main/public/twitter_clone.jpg"
             />
           </a>
           <div className={styles.cell__text}>

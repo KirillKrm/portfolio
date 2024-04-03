@@ -39,7 +39,10 @@ export default function Header() {
     <div className={styles.container}>
       <div className={styles.container__profile}>
         <div className={styles.profile__portret}>
-          <img src="portfolio/portret.jpg" alt="portret" />
+          <img
+            src="https://raw.githubusercontent.com/KirillKrm/portfolio/main/public/portret.jpg"
+            alt="portret"
+          />
         </div>
         <div className={styles.profile__name}>Kyrylo Karmazin</div>
         <div className={styles.profile__position}>Front-End Developer</div>
