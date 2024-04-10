@@ -1,55 +1,72 @@
+interface Project {
+  name: string
+  description: string
+  stack: string
+  githubUrl: string
+  imageUrl: string
+}
+
+const projectList: Project[] = [
+  {
+    name: 'Twitter Clone',
+    description:
+      'Twitter Clone is a web app that allows you to create and read user posts.',
+    stack: 'React.js, Redux, TailwindCSS, Framer Motion, i18n',
+    githubUrl: 'https://github.com/KirillKrm/twitter-clone',
+    imageUrl:
+      'https://raw.githubusercontent.com/KirillKrm/portfolio/main/public/twitter_clone.jpg',
+  },
+  {
+    name: 'Video Conferencing',
+    description:
+      'Video Conferencing is a web app that allows you to create or join video meetings.',
+    stack: 'React.js, Socket.IO, WebRTC',
+    githubUrl: 'https://github.com/KirillKrm/WebChat_frontend',
+    imageUrl:
+      'https://raw.githubusercontent.com/KirillKrm/portfolio/main/public/video_conferencing.png',
+  },
+  {
+    name: 'Music Player',
+    description:
+      'Music Player is a web app for listening to music directly in your browser and for its visualization.',
+    stack: 'Angular, Angular Material, TailwindCSS',
+    githubUrl: 'https://github.com/KirillKrm/music-player',
+    imageUrl:
+      'https://raw.githubusercontent.com/KirillKrm/portfolio/main/public/music_player.png',
+  },
+]
+
 export default function Projects() {
   return (
     <div className={styles.container}>
       <div className={styles.container__grid}>
-        <div className={styles.grid__cell}>
-          <a
-            className={styles.cell__anchor}
-            href={'https://github.com/KirillKrm/WebChat_frontend'}
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            <img
-              className={styles.anchor__image}
-              alt="Video-conferencing"
-              src="https://raw.githubusercontent.com/KirillKrm/portfolio/main/public/video_conferencing.png"
-            />
-          </a>
-          <div className={styles.cell__text}>
-            <span className={styles.text__name}>Video conferencing</span>
-            <span className={styles.text__description}>
-              Video conferencing is a web app that allows you to create or join
-              video meetings.
-            </span>
-            <span className={styles.text__description}>
-              React.js, Socket.IO, WebRTC
-            </span>
-          </div>
-        </div>
-        <div className={styles.grid__cell}>
-          <a
-            className={styles.cell__anchor}
-            href={'https://github.com/KirillKrm/twitter-clone'}
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            <img
-              className={styles.anchor__image}
-              alt="Twitter Clone"
-              src="https://raw.githubusercontent.com/KirillKrm/portfolio/main/public/twitter_clone.jpg"
-            />
-          </a>
-          <div className={styles.cell__text}>
-            <span className={styles.text__name}>Twitter Clone</span>
-            <span className={styles.text__description}>
-              Twitter Clone is a web app that allows you to create and read user
-              posts.
-            </span>
-            <span className={styles.text__description}>
-              React.js, Redux, TailwindCSS, Framer Motion, i18n
-            </span>
-          </div>
-        </div>
+        {projectList.map((project) => {
+          return (
+            <div className={styles.grid__cell}>
+              <a
+                className={styles.cell__anchor}
+                href={project.githubUrl}
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <img
+                  className={styles.anchor__image}
+                  alt={project.name}
+                  src={project.imageUrl}
+                />
+              </a>
+              <div className={styles.cell__text}>
+                <span className={styles.text__name}>{project.name}</span>
+                <span className={styles.text__description}>
+                  {project.description}
+                </span>
+                <span className={styles.text__description}>
+                  {project.stack}
+                </span>
+              </div>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
