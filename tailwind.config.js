@@ -4,10 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#222831',
-        secondary: '#393E46',
-        tertiary: '#00ADB5',
-        quaternary: '#EEEEEE',
+        base: '#070714',
+        surface: '#0f0f23',
+        accent: '#7c3aed',
+        'accent-light': '#a78bfa',
+        'text-primary': '#f8fafc',
+        'text-muted': '#94a3b8',
+      },
+      fontFamily: {
+        grotesk: ['"Space Grotesk"', 'sans-serif'],
       },
     },
   },
