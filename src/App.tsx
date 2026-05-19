@@ -1,33 +1,21 @@
-import Header from './components/Header'
-import Main from './components/MainComponent/Main'
+import CustomCursor from './components/CustomCursor'
+import Nav from './components/Nav'
+import Hero from './components/Hero'
+import About from './components/About'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
 
-function App() {
+export default function App() {
   return (
-    <div className={styles.container}>
-      <Header />
-      <Main />
+    <div className="bg-base text-text-primary min-h-screen">
+      <CustomCursor />
+      <Nav />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
     </div>
   )
 }
-
-const styles = {
-  container: `
-    flex
-    flex-col
-    min-h-screen
-    items-center
-    p-4
-    gap-4
-    bg-primary
-    bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]
-    text-quaternary
-
-    sm:flex-row
-    sm:justify-center
-    sm:items-start
-    sm:p-8
-    sm:gap-8
-  `,
-}
-
-export default App
