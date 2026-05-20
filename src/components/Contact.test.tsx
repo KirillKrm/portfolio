@@ -15,7 +15,7 @@ test('Contact renders email address', () => {
 
 test('Contact shows "Copied!" after clicking email', async () => {
   Object.assign(navigator, {
-    clipboard: { writeText: jest.fn().mockResolvedValue(undefined) },
+    clipboard: { writeText: vi.fn().mockResolvedValue(undefined) },
   })
   render(<Contact />)
   await userEvent.click(screen.getByText('kirillkarmazin2301@gmail.com'))

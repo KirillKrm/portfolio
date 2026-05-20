@@ -22,11 +22,11 @@ export default function Nav() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 px-6 sm:px-8 py-4 flex justify-between items-center backdrop-blur-md bg-base/80 border-b border-white/5"
+      className="fixed top-0 inset-x-0 z-50 px-6 sm:px-8 py-4 flex justify-between items-center backdrop-blur-md bg-background/80 border-b border-white/5"
       style={{ opacity }}
     >
       <img
-        src={`${process.env.PUBLIC_URL}/logo.png`}
+        src={`${import.meta.env.BASE_URL}logo.png`}
         alt="Kyrylo Karmazin logo"
         width={36}
         height={36}
@@ -60,7 +60,7 @@ export default function Nav() {
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 right-0 bg-surface border-b border-white/5 py-6 flex flex-col items-center gap-5 sm:hidden"
+          className="absolute top-full inset-x-0 bg-surface border-b border-white/5 py-6 flex flex-col items-center gap-5 sm:hidden"
         >
           {sections.map((s) => (
             <button

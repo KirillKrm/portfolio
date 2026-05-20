@@ -25,12 +25,12 @@ export default function CustomCursor() {
     <>
       {/* Instant dot */}
       <motion.div
-        className="fixed w-2 h-2 bg-white rounded-full pointer-events-none z-[9998]"
+        className="fixed size-2 bg-white rounded-full pointer-events-none z-9998"
         style={{ left: mouseX, top: mouseY, x: '-50%', y: '-50%' }}
       />
       {/* Spring-lag ring */}
       <motion.div
-        className="fixed w-8 h-8 border border-white/30 rounded-full pointer-events-none z-[9997]"
+        className="fixed size-8 border border-white/30 rounded-full pointer-events-none z-9997"
         style={{ left: springX, top: springY, x: '-50%', y: '-50%' }}
       />
     </>

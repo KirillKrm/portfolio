@@ -43,7 +43,7 @@ export default function Hero() {
   const chevronOpacity = useTransform(scrollY, [0, 150], [1, 0])
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-base">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
       <ParticleCanvas />
 
       {/* Radial glow */}

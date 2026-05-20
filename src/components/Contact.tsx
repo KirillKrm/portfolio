@@ -60,7 +60,7 @@ export default function Contact() {
       className="relative py-40 px-4 sm:px-8 flex flex-col items-center text-center overflow-hidden"
     >
       {/* Radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-96 bg-accent/15 rounded-full blur-3xl pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -71,7 +71,7 @@ export default function Contact() {
       >
         <h2 className="font-grotesk text-5xl sm:text-7xl font-bold text-text-primary mb-6 leading-tight">
           Let&apos;s build something{' '}
-          <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-accent to-accent-light bg-clip-text text-transparent">
             together.
           </span>
         </h2>

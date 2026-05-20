@@ -28,7 +28,7 @@ const projects: Project[] = [
       'React Query',
       'Redux',
     ],
-    imageUrl: `${process.env.PUBLIC_URL}/parcelgo.png`,
+    imageUrl: `${import.meta.env.BASE_URL}parcelgo.png`,
   },
   {
     number: '02',
@@ -99,15 +99,15 @@ function ProjectCard({ project }: ProjectCardProps) {
           style={{ y: imageY }}
           src={project.imageUrl}
           alt={project.name}
-          className="w-full h-full object-cover scale-110"
+          className="size-full object-cover scale-110"
           draggable={false}
         />
-        <div className="absolute inset-0 bg-base/20 group-hover:bg-transparent transition-colors duration-300" />
+        <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-300" />
       </div>
 
       {/* Content */}
       <div className="relative p-8 flex flex-col justify-center">
-        <span className="absolute top-6 right-6 font-grotesk text-6xl font-bold text-white/[0.04] select-none pointer-events-none">
+        <span className="absolute top-6 right-6 font-grotesk text-6xl font-bold text-white/4 select-none pointer-events-none">
           {project.number}
         </span>
         <span className="text-accent text-xs font-semibold uppercase tracking-widest mb-2">
