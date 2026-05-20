@@ -6,9 +6,10 @@ Live: [kirillkrm.github.io/portfolio](https://kirillkrm.github.io/portfolio)
 
 ## Stack
 
-- React 18 + TypeScript
-- Tailwind CSS
-- Framer Motion
+- React 19 + TypeScript 6
+- Vite 8 + Vitest
+- Tailwind CSS 4
+- Framer Motion 12
 - GitHub Pages
 
 ## Development
@@ -16,6 +17,12 @@ Live: [kirillkrm.github.io/portfolio](https://kirillkrm.github.io/portfolio)
 ```bash
 npm install
 npm start
+```
+
+## Testing
+
+```bash
+npm test
 ```
 
 ## Deployment
