@@ -91,7 +91,7 @@ function ProjectCard({ project }: ProjectCardProps) {
       style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
-      className="grid grid-cols-1 sm:grid-cols-[55%_45%] rounded-2xl overflow-hidden bg-surface border border-white/5 hover:border-accent/30 transition-colors duration-300 group"
+      className="relative grid grid-cols-1 sm:grid-cols-[55%_45%] rounded-2xl overflow-hidden bg-surface border border-white/5 hover:border-accent/30 transition-colors duration-300 group"
     >
       {/* Image */}
       <div className="relative overflow-hidden h-56 sm:h-72">
